@@ -59,7 +59,7 @@ Modules required for testing your in-development lenses (see [Push-to-Device](ht
 
 ## Installation
 ### [Swift Package Manager](https://github.com/apple/swift-package-manager)
-1. In Xcode, select "File" → "Swift Packages" → "Add Package Dependency"
+1. In Xcode, select "File" → "Add Package Dependencies…"
 2. Enter the repository URL: `https://github.com/Snapchat/camera-kit-ios-sdk.git`
 3. Select the version and modules you want to use in your project
 
@@ -129,7 +129,7 @@ extension MyViewController: LensRepositorySpecificObserver {
             // Apply a lens, which makes it visible on previewView
             self.cameraKit.lenses.processor?.apply(lens: lens, launchData: nil) { success in
                 if success {
-                    print("\\(lens.name ?? "Unnamed") (\\(lens.id)) Applied")
+                    print("\(lens.name ?? "Unnamed") (\(lens.id)) Applied")
                 } else {
                     print("Lens failed to apply")
                 }
